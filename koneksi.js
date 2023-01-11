@@ -1,15 +1,19 @@
-const { Sequelize } = require('sequelize');
+const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('uas_integrasi', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
+const koneksi = new Sequelize('sistem_pusat', 'root', '', {
+       host: 'localhost',
+       port: '3307',
+       dialect: 'mariadb',
+       dialectOptions:{
+              useUTC:false, 
+              timezone: "Etc/GMT+7"
+       }
 });
 
-try {
-    sequelize.authenticate();
-    console.log('Berhasil terhubung');
-} catch (error) {
-    console.error('Gagal terhubung DB : ', error);
-}
+koneksi.authenticate().then(() => {
+       console.log('Berhasil Konek ke Database');
+}).catch(err => {
+       console.error('Gagal Konek ke Database : ', err.message);
+});
 
-module.exports=sequelize;
+module.exports = koneksi;
