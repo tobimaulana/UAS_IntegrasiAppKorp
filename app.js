@@ -6,13 +6,14 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var angkatanRouter = require('./routes/mahasiswa');
+var angkatanRouter = require('./routes/angkatan');
 var biayalainRouter = require('./routes/biaya_lain');
 var biayapmbRouter = require('./routes/biaya_pmb');
 var biayatetapRouter = require('./routes/biaya_tetap');
 var dosenRouter = require('./routes/dosen');
 var fakultasRouter = require('./routes/fakultas');
 var jadwalRouter = require('./routes/jadwal');
+var mahasiswaaRouter = require('./routes/mahasiswaa');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use('/biaya_tetap', biayatetapRouter);
 app.use('/dosen', dosenRouter);
 app.use('/fakultas', fakultasRouter);
 app.use('/jadwal', jadwalRouter);
+app.use('/mahasiswaa', mahasiswaaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
