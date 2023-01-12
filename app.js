@@ -15,6 +15,7 @@ var fakultasRouter = require('./routes/fakultas');
 var jadwalRouter = require('./routes/jadwal');
 var mahasiswaaRouter = require('./routes/mahasiswaa');
 var matkulRouter = require('./routes/matkul');
+var prodiRouter = require('./routes/prodi');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use('/fakultas', fakultasRouter);
 app.use('/jadwal', jadwalRouter);
 app.use('/mahasiswaa', mahasiswaaRouter);
 app.use('/matkul', matkulRouter);
+app.use('/prodi', prodiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
