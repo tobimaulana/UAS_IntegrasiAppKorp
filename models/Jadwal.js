@@ -11,10 +11,6 @@ const Jadwal = koneksi.define('jadwal', {
               type: Sequelize.STRING,
               allowNull: false
        },
-       id_kelas: {
-              type: Sequelize.STRING,
-              allowNull: false
-       },
        id_ruang: {
               type: Sequelize.STRING,
               allowNull: false

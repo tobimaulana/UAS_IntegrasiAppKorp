@@ -7,12 +7,12 @@ const Biaya_Lain = koneksi.define('biaya_lain', {
               allowNull: false,
               primaryKey:true
        },
-       akun_id: {
-              type: Sequelize.INTEGER,
+       nim: {
+              type: Sequelize.STRING,
               allowNull: false
        },
-       jurusan: {
-              type: Sequelize.BIGINT,
+       id_prodi: {
+              type: Sequelize.STRING,
               allowNull: false
        },
        nama_biaya: {
@@ -24,7 +24,7 @@ const Biaya_Lain = koneksi.define('biaya_lain', {
               allowNull: false
        },
        status: {
-              type: Sequelize.INTEGER,
+              type: Sequelize.STRING,
               allowNull: false
        },
 },

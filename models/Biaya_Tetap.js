@@ -3,12 +3,12 @@ const Sequelize = require('sequelize');
   
 const Biaya_Tetap = koneksi.define('biaya_tetap', {
        id: {
-              type: Sequelize.BIGINT,
+              type: Sequelize.STRING,
               allowNull: false,
               primaryKey:true
        },
-       akun_id: {
-              type: Sequelize.INTEGER,
+       nim: {
+              type: Sequelize.STRING,
               allowNull: false
        },
        nama_biaya: {
@@ -19,16 +19,20 @@ const Biaya_Tetap = koneksi.define('biaya_tetap', {
               type: Sequelize.DOUBLE,
               allowNull: false
        },
-       jurusan: {
-              type: Sequelize.BIGINT,
+       id_prodi: {
+              type: Sequelize.STRING,
               allowNull: false
        },
        smt: {
               type: Sequelize.INTEGER,
               allowNull: false
        },
-       tahun_angkatan: {
-              type: Sequelize.INTEGER,
+       id_angkatan: {
+              type: Sequelize.STRING,
+              allowNull: false
+       },
+       tanggal_bayar: {
+              type: Sequelize.DATE,
               allowNull: false
        },
 },

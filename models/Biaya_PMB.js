@@ -7,8 +7,8 @@ const Biaya_PMB = koneksi.define('biaya_pmb', {
               allowNull: false,
               primaryKey:true
        },
-       akun_id: {
-              type: Sequelize.INTEGER,
+       nim: {
+              type: Sequelize.STRING,
               allowNull: false
        },
        nama_biaya: {
@@ -19,18 +19,22 @@ const Biaya_PMB = koneksi.define('biaya_pmb', {
               type: Sequelize.DOUBLE,
               allowNull: false
        },
-       tahun_angkatan: {
-              type: Sequelize.INTEGER,
+       id_angkatan: {
+              type: Sequelize.STRING,
               allowNull: false
        },
        gelombang: {
               type: Sequelize.STRING,
               allowNull: false
        },
-       jurusan: {
+       id_prodi: {
               type: Sequelize.BIGINT,
               allowNull: false
        },
+       tanggal_bayar: {
+              type: Sequelize.DATE,
+              allowNull: false
+       }
 },
 {
        timestamps:true,

@@ -8,7 +8,7 @@ const Dosen = koneksi.define('dosen', {
               primaryKey:true
        },
        id_matkul: {
-              type: Sequelize.INTEGER,
+              type: Sequelize.STRING,
               allowNull: false
        },
        nama_dosen: {
@@ -16,11 +16,11 @@ const Dosen = koneksi.define('dosen', {
               allowNull: false
        },
        alamat: {
-              type: Sequelize.DOUBLE,
+              type: Sequelize.TEXT,
               allowNull: false
        },
        no_hp: {
-              type: Sequelize.BIGINT,
+              type: Sequelize.STRING,
               allowNull: false
        }
 },

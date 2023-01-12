@@ -15,7 +15,7 @@ const Matkul = koneksi.define('matkul', {
               type: Sequelize.CHAR,
               allowNull: false
        },
-       semester: {
+       smt: {
               type: Sequelize.STRING,
               allowNull: false
        },
