@@ -11,6 +11,7 @@ var biayalainRouter = require('./routes/biaya_lain');
 var biayapmbRouter = require('./routes/biaya_pmb');
 var biayatetapRouter = require('./routes/biaya_tetap');
 var dosenRouter = require('./routes/dosen');
+var fakultasRouter = require('./routes/fakultas');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/biaya_lain', biayalainRouter);
 app.use('/biaya_pmb', biayapmbRouter);
 app.use('/biaya_tetap', biayatetapRouter);
 app.use('/dosen', dosenRouter);
+app.use('/fakultas', fakultasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
